@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pump</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/main.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="static/main.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <label for="sys_static_head" class="form-label">Static Head</label>
+                <input class="form-control" id="sys_static_head" type="text" name="sys_static_head">
+            </div>
+            <div class="col-md-2">
+                <label for="sys_k_factor" class="form-label">K-Factor head</label>
+                <input class="form-control" id="sys_k_factor" type="text" name="sys_k_factor">
+            </div>
+        </div>
+
+        <div class="row">
+            <label>Pump Curve</label>
+            <div class="col-md-3">
+                <table class="table table-striped">
+                    <tr>
+                        <td>0</td>
+                        <td><input class="form-control" type="text" name="pump_0"></td>
+                    </tr>
+                    <tr>
+                        <td>500</td>
+                        <td><input class="form-control" type="text" name="pump_500"></td>
+                    </tr>
+                    <tr>
+                        <td>1000</td>
+                        <td><input class="form-control" type="text" name="pump_1000"></td>
+                    </tr>
+                    <tr>
+                        <td>1500</td>
+                        <td><input class="form-control" type="text" name="pump_1500"></td>
+                    </tr>
+                    <tr>
+                        <td>2000</td>
+                        <td><input class="form-control" type="text" name="pump_2000"></td>
+                    </tr>
+                    <tr>
+                        <td>2500</td>
+                        <td><input class="form-control" type="text" name="pump_2500"></td>
+                    </tr>
+                    <tr>
+                        <td>3000</td>
+                        <td><input class="form-control" type="text" name="pump_3000"></td>
+                    </tr>
+                    <tr>
+                        <td>3500</td>
+                        <td><input class="form-control" type="text" name="pump_3500"></td>
+                    </tr>
+                    <tr>
+                        <td>4000</td>
+                        <td><input class="form-control" type="text" name="pump_4000"></td>
+                    </tr>
+                    <tr>
+                        <td>4500</td>
+                        <td><input class="form-control" type="text" name="pump_4500"></td>
+                    </tr>
+                    <tr>
+                        <td>5000</td>
+                        <td><input class="form-control" type="text" name="pump_5000"></td>
+                    </tr>
+                    <tr>
+                        <td>5500</td>
+                        <td><input class="form-control" type="text" name="pump_5500"></td>
+                    </tr>
+                    <tr>
+                        <td>6000</td>
+                        <td><input class="form-control" type="text" name="pump_6000"></td>
+                    </tr>
+                    <tr>
+                        <td>6500</td>
+                        <td><input class="form-control" type="text" name="pump_6500"></td>
+                    </tr>
+                    <tr>
+                        <td>7000</td>
+                        <td><input class="form-control" type="text" name="pump_7000"></td>
+                    </tr>
+                    <tr>
+                        <td>7500</td>
+                        <td><input class="form-control" type="text" name="pump_7500"></td>
+                    </tr>
+                    <tr>
+                        <td>8000</td>
+                        <td><input class="form-control" type="text" name="pump_8000"></td>
+                    </tr>
+                    <tr>
+                        <td>8500</td>
+                        <td><input class="form-control" type="text" name="pump_8500"></td>
+                    </tr>
+                    <tr>
+                        <td>9000</td>
+                        <td><input class="form-control" type="text" name="pump_9000"></td>
+                    </tr>
+                    <tr>
+                        <td>9500</td>
+                        <td><input class="form-control" type="text" name="pump_9500"></td>
+                    </tr>
+                    <tr>
+                        <td>10000</td>
+                        <td><input class="form-control" type="text" name="pump_10000"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="result"></div>
+
+        <div class="row">
+            <div class="col-12">
+                <button id="submit-button" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
