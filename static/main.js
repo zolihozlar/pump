@@ -35,7 +35,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: 'POST',
-            url: 'http://localhost:5000/visualize',
+            url: 'visualize',
             data: JSON.stringify(values),
             success: function (data) {
                 $('#result').html(`
