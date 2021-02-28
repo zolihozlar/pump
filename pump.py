@@ -58,7 +58,14 @@ def main_pump(data):
                 go.Scatter(x=df['flow'], y=df['pump_pressure'],
                         mode='lines',
                         name='Pump Pressure')
-                ]
+                ],
+        "layout": go.Layout(legend=dict(
+                  orientation = "h",
+                  yanchor="bottom",
+                  y=-0.3,
+                  xanchor="left",
+                  x=0))
+        
     }, include_plotlyjs=False, output_type='div')
 
     return {'flow': str(flow), 'pump_pressure': str(pump_pressure), 'html_chart': str(html_chart)}
