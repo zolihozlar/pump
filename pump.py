@@ -38,4 +38,27 @@ def main_pump(data):
     # sns.lineplot(data=df, x="flow", y="sys_pressure")
     # sns.lineplot(data=df, x="flow", y="pump_pressure")
 
-    return {'flow': str(flow), 'pump_pressure': str(pump_pressure) }
+
+    import plotly
+    import plotly.graph_objects as go
+
+    # Create traces
+    # fig = go.Figure()
+    # fig.add_trace(go.Scatter(x=df['flow'], y=df['sys_pressure'],
+    #                     mode='lines',
+    #                     name='lines'))
+    # fig.add_trace(go.Scatter(x=df['flow'], y=df['pump_pressure'],
+    #                     mode='lines',
+    #                     name='lines'))
+
+    html_chart = plotly.offline.plot({
+        "data": [go.Scatter(x=df['flow'], y=df['sys_pressure'],
+                        mode='lines',
+                        name='Sys Pressure'), 
+                go.Scatter(x=df['flow'], y=df['pump_pressure'],
+                        mode='lines',
+                        name='Pump Pressure')
+                ]
+    }, include_plotlyjs=False, output_type='div')
+
+    return {'flow': str(flow), 'pump_pressure': str(pump_pressure), 'html_chart': str(html_chart)}

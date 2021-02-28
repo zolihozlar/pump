@@ -33,16 +33,28 @@ $(document).ready(function () {
             values[key] = value;
         });
 
+        $(document).ajaxStart(function () {
+            // show loader on start
+            $("#loadbar").css("display", "block");
+        }).ajaxSuccess(function () {
+            // hide loader on success
+            $("#loadbar").css("display", "none");
+        });
+
         $.ajax({
             type: 'POST',
-            url: window.location.protocol + "//" + window.location.host,
+            url: `${window.location.protocol}//${window.location.host}/visualize`,
             data: JSON.stringify(values),
             success: function (data) {
                 $('#result').html(`
                 <div class="col-12 alert alert-success" role="alert">
+                    <h2>Result</h2>
                     <p>
                         Flow: ${data['flow']}<br>Pump Pressure: ${data['pump_pressure']}
                     </p>
+                    <div>
+                        ${data['html_chart']}
+                    </div>
                 </div>`)
                 // alert(`Flow: ${data['flow']}\nPump Pressure: ${data['pump_pressure']}`)
             },
